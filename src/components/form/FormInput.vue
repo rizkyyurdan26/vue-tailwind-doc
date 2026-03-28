@@ -11,7 +11,7 @@
           type="text"
           placeholder="Input Your Name"
           v-model="fullname"
-          class="border border-gray-300 rounded-lg p-2 w-84"
+          class="border border-gray-300 rounded-lg p-2 md:w-84"
         />
       </div>
       <div class="flex flex-col">
@@ -20,7 +20,7 @@
           type="email"
           placeholder="Input Email"
           v-model="email"
-          class="border border-gray-300 rounded-lg p-2 w-84"
+          class="border border-gray-300 rounded-lg p-2 md:w-84"
         />
       </div>
       <div class="flex items-center gap-2">
@@ -41,10 +41,16 @@
         </select>
       </div>
 
-      <div class="flex justify-center w-full mt-5">
+      <div class="flex gap-3 justify-center mt-5">
+        <input type="checkbox" class="w-5" v-model="isActive" />
+        <p>Menyetujui semua syarat dan ketentuan</p>
+      </div>
+
+      <div class="flex justify-center w-full">
         <button
+          :disabled="!isActive"
           type="submit"
-          class="bg-blue-500 text-white text-lg px-16 md:px-24 py-3 rounded-lg"
+          class="bg-blue-500 text-white text-lg px-16 md:px-24 py-3 rounded-lg disabled:cursor-not-allowed disabled:bg-gray-400"
         >
           Submit
         </button>
@@ -62,10 +68,17 @@ const email = ref("");
 const gender = ref("");
 const genderList = ["Laki-laki", "Perempuan"];
 
+const isActive = ref(false);
+
 function submitForm() {
-  console.log(fullname.value);
-  console.log(phoneNumber.value);
-  console.log(gender.value);
+
+  if (!fullname.value.trim() || !phoneNumber.value.trim() || !email.value.trim() || !gender.value.trim()){
+    alert('Harap isi semua field dengan benar')
+  } else{
+    console.log(fullname.value);
+    console.log(phoneNumber.value);
+    console.log(gender.value);  
+  }
 
   fullname.value = "";
   email.value = "";

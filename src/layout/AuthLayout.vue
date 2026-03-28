@@ -5,6 +5,7 @@
 
         <!-- Body -->
         <main>
+            <HeroMixComplete/>
             <router-view/>
         </main>
 
@@ -16,6 +17,7 @@
 
 <script setup>
 import FooterComponent from '../components/FooterComponent.vue';
+import HeroMixComplete from '../components/heroSection/HeroMixComplete.vue';
 import NavbarComponent from '../components/NavbarComponent.vue';
 
 

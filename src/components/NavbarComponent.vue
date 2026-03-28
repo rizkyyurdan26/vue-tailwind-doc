@@ -10,19 +10,21 @@
     <nav class="flex justify-between items-center p-4 max-w-6xl mx-auto">
       <img src="../assets/vue.svg" alt="Logo" />
 
-      <button @click="handleActive" :class="['md:hidden text-2xl font-bold', isScrolled ? 'text-black' : 'text-white']">≡</button>
+      <button @click="handleActive" :class="['md:hidden text-2xl font-bold', isScrolled ? 'text-black' : 'text-black']">≡</button>
 
       <ul
         :class="[
-          'fixed flex flex-col md:flex-row top-16 right-0 h-screen w-1/2 bg-gray-200 p-4 gap-5',
+          'fixed flex flex-col md:flex-row  right-0 h-screen w-1/2 bg-gray-200/90 p-4 gap-5',
           'transform transition-transform duration-300 ease-in-out',
+          isScrolled ? 'top-17' : 'top-16',
           isActive ? 'translate-x-0 text-black' : 'translate-x-full',
           'md:static md:h-auto md:w-auto md:bg-transparent md:translate-x-0 md:flex md:gap-10',
         ]"
       >
-        <li><a href="#" class="hover:text-violet-400 active:text-violet-400">Home</a></li>
-        <li><a href="#about" class="hover:text-violet-400 active:text-violet-400">About</a></li>
-        <li><a href="#footer" class="hover:text-violet-400 active:text-violet-400">Contact</a></li>
+        <li><router-link to="/" @click="isActive = false" class="hover:text-violet-400 active:text-violet-400">Home</router-link></li>
+        <li><a href="#about" @click="isActive = false" class="hover:text-violet-400 active:text-violet-400">About</a></li>
+        <li><a href="#footer" @click="isActive = false" class="hover:text-violet-400 active:text-violet-400">Contact</a></li>
+        <li><router-link to="/product" @click="isActive = false" class="hover:text-violet-400 active:text-violet-400">Products</router-link></li>
       </ul>
     </nav>
   </header>

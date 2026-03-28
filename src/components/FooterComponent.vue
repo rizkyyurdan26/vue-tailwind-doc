@@ -6,26 +6,26 @@
     <!-- Container -->
 
     <div
-      class="flex flex-col md:flex-row w-full md:max-w-6xl p-4 mx-auto justify-between items-center"
+      class="flex flex-col md:flex-row w-full md:max-w-6xl px-6 py-4 md:p-4 mx-auto justify-between items-start md:items-center"
     >
       <!-- Left -->
       <div class="text-white  flex flex-col gap-2 p-4 ">
         
         <div class="flex gap-2">
             <!-- <img src="../assets/vue.svg" class="text-lg"> -->
-            <h1 class="text-2xl font-bold">RYS</h1>
+            <h1 class="text-xl md:text-2xl font-bold">RYS</h1>
         </div>
         
-            <h1 class="text-xl font-semibold text-white/70">Digital <br> & Website Solution</h1>
+            <h1 class=" text-md md:text-xl font-semibold text-white/70">Digital <br> & Website Solution</h1>
         
       </div>
 
       <div class="hidden md:block w-px h-32 bg-white/30"></div>
 
       <!-- Middle -->
-      <div class="flex flex-col text-white p-4 gap-4 items-center">
-        <h1 class="text-xl font-semibold">Offers</h1>
-        <ul class="list-disc pl-5 text-white/70">
+      <div class="flex flex-col text-white p-4 gap-4 md:items-center">
+        <h1 class="text-md md:text-xl font-semibold">Offers</h1>
+        <ul class="list-disc pl-5 text-white/70 text-sm md:text-md">
             <li>Company Website</li>
             <li>Marketing Website</li>
             <li>Machine Learning</li>
@@ -37,9 +37,9 @@
 
 
       <!-- Right -->
-      <div class="flex flex-col items-center text-white p-4 gap-3">
-        <h1 class="text-2xl font-bold">Contact</h1>
-        <div class="flex flex-col gap-1 text-white/70">
+      <div class="flex flex-col md:items-center text-white p-4 gap-3">
+        <h1 class="md:text-2xl font-bold">Contact</h1>
+        <div class="flex flex-col gap-1 text-white/70 text-sm md:text-md">
             <h3>Email: <a href="">testing@gmail.com</a></h3>
             <h3>Phone: 08xx xxxx xxxx</h3>
             <h3>Address: Pekanbaru City, <br> Riau, Indonesia</h3>

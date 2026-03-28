@@ -1,18 +1,17 @@
 <template>
-  <div class="relative w-full h-screen">
+  <div class="relative w-full h-64 md:h-screen top-16 md:top-0">
     <img
       v-for="(img, i) in images"
       :key="i"
       :src="img"
-      class="absolute w-full h-full object-cover transition-opacity duration-1000"
+      class="absolute w-full h-full  object-cover transition-opacity duration-1000"
       :class="i === currIdx ? 'opacity-100' : 'opacity-0'"
     />
 
-    <
     <!-- Right Button -->
     <button
       @click="nextImg"
-      class="absolute right-5 top-1/2 text-black/50 text-5xl font-bold bg-blue-500/20 px-2 rounded-full hover:bg-blue-500/50 hover:text-white"
+      class="absolute right-5 top-1/2 text-black/50 text-xl md:text-5xl font-bold bg-blue-500/20 px-2 rounded-full hover:bg-blue-500/50 hover:text-white"
     >
       >
     </button>
@@ -20,7 +19,7 @@
     <!-- Left Button -->
     <button
       @click="prevImg"
-      class="absolute left-5 top-1/2 text-black/50 text-5xl font-bold bg-blue-500/20 px-2 rounded-full hover:bg-blue-500/50 hover:text-white"
+      class="absolute left-5 top-1/2 text-black/50 text-xl md:text-5xl font-bold bg-blue-500/20 px-2 rounded-full hover:bg-blue-500/50 hover:text-white"
     >
       <
     </button>
@@ -31,9 +30,9 @@
 import { onMounted, onUnmounted, ref } from "vue";
 
 const images = [
-  "https://i.pinimg.com/736x/ea/7a/30/ea7a300c2990158aea798402e5739c81.jpg",
-  "https://img.lazcdn.com/g/p/cae20f9d943a66951f607424573a80e4.jpg_720x720q80.jpg",
-  "https://png.pngtree.com/thumb_back/fh260/background/20230527/pngtree-landscape-wallpapers-image_2700406.jpg",
+  "https://redflagalerts.com/wp-content/uploads/2021/08/Landscape20Shopping20Mall20Design.png",
+  "https://redflagalerts.com/wp-content/uploads/2021/08/Use20The20Right20Shopping20Mall20Landscape20Enhancements.png",
+  "https://greenspired.eu/wp-content/uploads/2022/08/how-to-design-relax-space-in-a-shopping-mall-landscape.jpg",
 ];
 
 const currIdx = ref(0);
